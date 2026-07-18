@@ -88,21 +88,16 @@ function Footer() {
   return (
     <FooterContainer>
       <FooterWrapper>
-        <Logo>Ayush Kaushal</Logo>
+        <Logo>SM Partners</Logo>
         <Nav>
           <NavLink href="#about">About</NavLink>
           <NavLink href="#skills">Skills</NavLink>
-          <NavLink href="#experience">Experience</NavLink>
+          
           <NavLink href="#projects">Projects</NavLink>
-          <NavLink href="#education">Education</NavLink>
+         
         </Nav>
-        <SocialMediaIcons>
-          <SocialMediaIcon href={Bio.twitter} target="display"><TwitterIcon /></SocialMediaIcon>
-          <SocialMediaIcon href={Bio.linkedin} target="display"><LinkedInIcon /></SocialMediaIcon>
-          <SocialMediaIcon href={Bio.insta} target="display"><InstagramIcon /></SocialMediaIcon>
-        </SocialMediaIcons>
         <Copyright>
-          &copy; 2023 Ayush Kaushal. All rights reserved.
+          &copy; 2026 SM Partners. All rights reserved.
         </Copyright>
 
       </FooterWrapper>

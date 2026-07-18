@@ -131,7 +131,16 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_tox7kqs', 'template_nv7k7mj', form.current, 'SybVGsYS52j2TfLbi')
+    const formData = new FormData(form.current);
+    const params = {
+      from_email: formData.get('from_email'),
+      from_name: formData.get('from_name'),
+      subject: formData.get('subject'),
+      message: formData.get('message')
+     
+    };
+
+    emailjs.send('service_h0x0d5s', 'template_n4pawkq', params, 'pOIP9uG0Jhc3geLFi')
       .then((result) => {
         setOpen(true);
         form.current.reset();
@@ -143,12 +152,12 @@ const Contact = () => {
 
 
   return (
-    <Container>
+    <Container id="contact">
       <Wrapper>
         <Title>Contact</Title>
-        <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
+        <Desc>Feel free to reach out to us for any questions or opportunities!</Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
-          <ContactTitle>Email Me 🚀</ContactTitle>
+          <ContactTitle>Email Us 🚀</ContactTitle>
           <ContactInput placeholder="Your Email" name="from_email" />
           <ContactInput placeholder="Your Name" name="from_name" />
           <ContactInput placeholder="Subject" name="subject" />
@@ -162,6 +171,10 @@ const Contact = () => {
           message="Email sent successfully!"
           severity="success"
         />
+      </Wrapper>
+      <Wrapper>
+        <Title>Phone No.</Title>
+        <Desc>+91 6395822235</Desc>
       </Wrapper>
     </Container>
   )

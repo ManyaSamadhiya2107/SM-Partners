@@ -3,17 +3,15 @@ import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, MobileIcon, Mob
 import { DiCssdeck } from 'react-icons/di';
 import { FaBars } from 'react-icons/fa';
 
-import { useTheme } from 'styled-components';
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   return (
     <Nav>
       <NavbarContainer>
         <NavLogo to='/'>
-          <a style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20;', cursor: 'pointer' }}>
+          <div style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20;', cursor: 'pointer' }}>
             <DiCssdeck size="3rem" /> <Span>Portfolio</Span>
-          </a>
+          </div>
         </NavLogo>
         <MobileIcon>
           <FaBars onClick={() => {

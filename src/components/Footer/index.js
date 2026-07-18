@@ -56,22 +56,6 @@ color: ${({ theme }) => theme.text_primary};
   }
 `;
 
-const SocialMediaIcons = styled.div`
-  display: flex;
-  margin-top: 1rem;
-`;
-
-const SocialMediaIcon = styled.a`
-  display: inline-block;
-  margin: 0 1rem;
-  font-size: 1.5rem;
-  color: ${({ theme }) => theme.text_primary};
-  transition: color 0.2s ease-in-out;
-  &:hover {
-    color: ${({ theme }) => theme.primary};
-  }
-`;
-
 const Copyright = styled.p`
   margin-top: 1.5rem;
   font-size: 0.9rem;
